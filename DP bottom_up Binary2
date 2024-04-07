@@ -1,0 +1,12 @@
+def binary2(n):
+    memo={}
+
+    memo[0]=1
+    for i in range(1,n+1):
+        sum=0
+        for j in range(0,i):
+            sum+=memo[j]*memo[i-1-j]
+        memo[i]=sum
+    return memo[n]
+
+print(binary2(23))
