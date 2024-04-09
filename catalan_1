@@ -1,0 +1,16 @@
+def cat(n):
+    if n==0: return 1
+    res=1
+    res2=1
+    res3=1
+    for i in range(1,n+n+1):
+        res*=i
+    for j in range(1,n+2):
+        res2*=j
+    for k in range(1,n+1):
+        res3*=k
+        
+    result=res/res2/res3
+    return result
+
+print(cat(4))
